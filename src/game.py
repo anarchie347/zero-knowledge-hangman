@@ -14,7 +14,7 @@ def getWordHashesFromNumber(num):
                 lineCount = int(line)
                 num = num % lineCount
             if i == num:
-                return parseLine(line)
+                return parseLine(line.strip())
 
 def getWordNumber():
     print("Enter a number or leave blank to choose a random one:")
