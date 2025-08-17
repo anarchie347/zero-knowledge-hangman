@@ -28,7 +28,7 @@ def main():
     with open(WORDS_PATH, "r") as wordList:
         wordCount = countWordsLen()
         with open(HASHES_PATH, "w") as hashList:
-            hashList.write(f"{wordCount},{SALT_LEN}\n")
+            hashList.write(f"{wordCount}\n")
             for line in wordList:
                 hashList.write(hashWord(line.strip()) + "\n")
 
