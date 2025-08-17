@@ -12,9 +12,7 @@ def saltAndHash(val):
     return f"{hexdigest},{salt}"
 
 def hashWord(word):
-    result = saltAndHash(word) + "|"
-    result += "|".join([ saltAndHash(letter) for letter in word])
-    return result
+    return "|".join([ saltAndHash(letter) for letter in word])
     
 def countWordsLen():
     with open(WORDS_PATH, "r") as file:
